@@ -9,9 +9,7 @@ No external requirements.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
 
-e.g.
 #### raven-supervisor::default
 <table>
   <tr>
@@ -25,6 +23,18 @@ e.g.
     <td>Integer</td>
     <td>port for http api access</td>
     <td><tt>9110</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['raven_supervisor']['username']</tt></td>
+    <td>String</td>
+    <td>username for http api access</td>
+    <td><tt>admin</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['raven_supervisor']['password']</tt></td>
+    <td>String</td>
+    <td>password for http api access</td>
+    <td><tt>""</tt></td>
   </tr>
 </table>
 
