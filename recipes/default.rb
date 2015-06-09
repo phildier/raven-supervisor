@@ -1,3 +1,4 @@
+
 package "python-setuptools"
 easy_install_package "supervisor"
 
@@ -14,7 +15,12 @@ template "/etc/supervisor/supervisord.conf" do
 end
 
 cookbook_file "/etc/init.d/supervisord" do
-	source "supervisord.sh"
+	case node["platform"]
+	when "ubuntu"
+		source "ubuntu-init"
+	when "redhat","centos"
+		source "redhat-init-equeffelec"
+	end
 	mode 0755
 end
 

@@ -96,11 +96,6 @@ force_stop() {
 
 case "$1" in
   start)
-  	if running ; then
-		echo "$NAME already running."
-		exit 0
-	fi
-
 	echo -n "Starting $DESC: "
 	start-stop-daemon --start --quiet --pidfile $PIDFILE \
 		--startas $DAEMON -- $DAEMON_OPTS
