@@ -1,4 +1,4 @@
-package "supervisor"
+package "python-setuptools"
 
 # daemon/client config
 template "/etc/supervisor/supervisord.conf" do
