@@ -41,10 +41,8 @@ Attributes
 Usage
 -----
 #### raven-supervisor::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
-Just include `raven-supervisor` in your node's `run_list`:
+Include `raven-supervisor` in your run list to install and configure `supervisor`
 
 ```json
 {
@@ -54,6 +52,11 @@ Just include `raven-supervisor` in your node's `run_list`:
   ]
 }
 ```
+LWRPs
+-----
+
+#### raven_supervisor_program
+
 
 Contributing
 ------------
