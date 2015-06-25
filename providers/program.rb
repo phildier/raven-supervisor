@@ -15,7 +15,7 @@ action :create do
 		end
 	end
 
-	template "/etc/supervisor/conf.d/#{name}.conf" do
+	template "/etc/supervisor.d/#{name}.conf" do
 		cookbook new_resource.cookbook || "raven-supervisor"
 		source "supervisor_program.conf.erb"
 		variables({

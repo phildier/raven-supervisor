@@ -2,12 +2,12 @@
 package "python-setuptools"
 easy_install_package "supervisor"
 
-directory "/etc/supervisor"
-directory "/etc/supervisor/conf.d"
+directory "/etc/supervisor.d"
 directory "/var/log/supervisor"
 
 # daemon/client config
-template "/etc/supervisor/supervisord.conf" do
+config_path = "/etc/supervisord.conf"
+template config_path do
 	source "supervisord.conf.erb"
 	variables ({
 			:port => node[:raven_supervisor][:port],
