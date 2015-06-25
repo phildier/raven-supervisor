@@ -3,6 +3,7 @@ package "python-setuptools"
 easy_install_package "supervisor"
 
 directory "/etc/supervisor"
+directory "/etc/supervisor/conf.d"
 directory "/var/log/supervisor"
 
 # daemon/client config
