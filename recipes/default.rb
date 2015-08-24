@@ -1,6 +1,8 @@
 
 package "python-setuptools"
-easy_install_package "supervisor"
+easy_install_package "supervisor" do
+	options "--prefix=/usr"
+end
 
 directory "/etc/supervisor.d"
 directory "/var/log/supervisor"
@@ -14,6 +16,8 @@ template config_path do
 			:username => node[:raven_supervisor][:username],
 			:password => node[:raven_supervisor][:password]
 			})
+
+	notifies :restart, "service[supervisord]", :delayed
 end
 
 cookbook_file "/etc/init.d/supervisord" do
@@ -24,6 +28,8 @@ cookbook_file "/etc/init.d/supervisord" do
 		source "redhat-init-equeffelec"
 	end
 	mode 0755
+
+	notifies :restart, "service[supervisord]", :delayed
 end
 
 # start it up
