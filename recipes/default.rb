@@ -1,8 +1,6 @@
 
 package "python-setuptools"
-easy_install_package "supervisor" do
-	options "--prefix=/usr --force-installation-into-system-dir"
-end
+easy_install_package "supervisor"
 
 directory "/etc/supervisor.d"
 directory "/var/log/supervisor"
