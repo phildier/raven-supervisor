@@ -1,7 +1,7 @@
 
 package "python-setuptools"
 easy_install_package "supervisor" do
-	options "--prefix=/usr"
+	options "--prefix=/usr --force-installation-into-system-dir"
 end
 
 directory "/etc/supervisor.d"
