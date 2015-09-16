@@ -1,4 +1,6 @@
 action :create do
+	@run_context.include_recipe 'raven-supervisor'
+
 	name = new_resource.name
 
 	if new_resource.user then
