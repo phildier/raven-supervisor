@@ -6,6 +6,9 @@ user=<%=@user%>
 numprocs=<%=@numprocs%>
 process_name=%(process_num)s
 <% end %>
+<% if @environment.length > 0 %>
+environment=<%=@environment.map { |k,v| "#{k.to_s}=\"#{v.to_s}\"" }.join ","%>
+<% end %>
 autostart=<%=@autostart ||= "true"%>
 autorestart=<%=@autorestart ||= "true"%>
 exitcodes=<%=@exitcodes.join(",")%>

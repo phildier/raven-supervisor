@@ -24,6 +24,7 @@ action :create do
             :name => name,
             :command => new_resource.command,
             :directory => new_resource.directory,
+			:environment => new_resource.environment,
             :user => new_resource.user,
             :numprocs => new_resource.numprocs,
 			:exitcodes => new_resource.exitcodes,
