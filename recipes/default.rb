@@ -22,7 +22,7 @@ cookbook_file "/etc/init.d/supervisord" do
 	case node["platform"]
 	when "ubuntu"
 		source "ubuntu-init"
-	when "redhat","centos"
+	when "redhat","centos","fedora","amazon"
 		source "redhat-init-equeffelec"
 	end
 	mode 0755
