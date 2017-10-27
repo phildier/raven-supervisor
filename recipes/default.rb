@@ -1,6 +1,6 @@
 
-package "python-setuptools"
-easy_install_package "supervisor"
+package "python-meld3"
+package "python-supervisor"
 
 directory "/etc/supervisor.d"
 directory "/var/log/supervisor"
